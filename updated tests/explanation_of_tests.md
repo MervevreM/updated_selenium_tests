@@ -15,7 +15,7 @@
          self.driver.save_screenshot(f"{self.folderpath}\{inspect.currentframe().f_code.co_name}{user,secret}.png") 
      
 
-+ 5'i test olmak üzere 6 yeni test eklendi.
++ 5'i test olmak üzere 6 yeni fonksiyon eklendi.
 
 
 ## Eklenen fonksiyonlar 
