@@ -8,16 +8,17 @@
 
 + Parametrize decorator'ünün bulunduğu alanlarda her parametrenin screenshot'ını dosya adının aynı olması sebebiyle ayrı ayrı alamazken, fonksiyonu yazarken kullandığımız değişkenleri koda ekleyerek her bir parametre değişikliğinde farklı ss almasını sağladık. 
 
-    BEFORE 
-    self.driver.save_screenshot(f"{self.folderpath}\{inspect.currentframe().f_code.co_name}.png") 
-    
-    AFTER
-     self.driver.save_screenshot(f"{self.folderpath}\{inspect.currentframe().f_code.co_name}{user,secret}.png") ## Eklenen fonksiyonlar ## test_none_user("kullaniciadi,sifre"iGetdata)
+        BEFORE 
+        self.driver.save_screenshot(f"{self.folderpath}\{inspect.currentframe().f_code.co_name}.png") 
+
+        AFTER
+         self.driver.save_screenshot(f"{self.folderpath}\{inspect.currentframe().f_code.co_name}{user,secret}.png") 
+     
 
 + 5'i test olmak üzere 6 yeni test eklendi.
 
 
-## Eklenen testler
+## Eklenen fonksiyonlar 
 
 ## Getdata():
 Öncelikle var olan dosyamıza path vererek erişiyoruz. Satır sayısını bir değişkene atayıp bu sayıyla bir for döngüsü yazıyoruz. Satırları okuyup tuple'lar halinde for döngüsünden hemen önce oluşturduğumuz boş listeye ekleyip listeyi return'lüyoruz. Parametrize decoratorunu kullanacağımız testlerde oldukça işimize yarayacak ve zaman kaybını önleyecek fonksiyonumuz hazır.
